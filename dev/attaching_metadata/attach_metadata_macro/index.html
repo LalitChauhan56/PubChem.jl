@@ -7,7 +7,7 @@
 # add PubChem Catalyst
 
 using PubChem, Catalyst</code></pre><p>We now start by defining our species using the <code>@species</code> macro from Catalyst.</p><pre><code class="language-julia hljs">@variables t
-@species HCl(t)</code></pre><p>Now we attach the chemical properties fetched from PubChem using the <code>attach_metadata</code> macro.</p><pre><code class="language-julia hljs">@attach_metadata HCl</code></pre><p>The <code>attach_metadata</code> macro queries the PubChem database and attaches the appropriate chemical properties to our species. We can now retrieve the chemical properties:</p><pre><code class="language-julia hljs">properties(HCl)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Dict{Any, Any} with 7 entries:
+@species HCl(t)</code></pre><p>Now we attach the chemical properties fetched from PubChem using the <code>attach_metadata</code> macro.</p><pre><code class="language-julia hljs">@attach_metadata HCl</code></pre><p>The <code>attach_metadata</code> macro queries the PubChem database and attaches the appropriate chemical properties to our species. We can now retrieve the chemical properties:</p><pre><code class="language-julia hljs">chemical_properties(HCl)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Dict{Any, Any} with 7 entries:
   &quot;IUPAC_Name_Preferred&quot;   =&gt; &quot;chlorane&quot;
   &quot;IUPAC_Name_Traditional&quot; =&gt; &quot;hydrogen chloride&quot;
   &quot;Charge&quot;                 =&gt; 0
@@ -18,7 +18,7 @@ using PubChem, Catalyst</code></pre><p>We now start by defining our species usin
 
 @variables t
 @species X(t)
-@attach_metadata X &quot;H2O&quot;</code></pre><p>The chemical properties of water have now been attached to <code>X</code>.</p><pre><code class="language-julia hljs">properties(X)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Dict{Any, Any} with 7 entries:
+@attach_metadata X &quot;H2O&quot;</code></pre><p>The chemical properties of water have now been attached to <code>X</code>.</p><pre><code class="language-julia hljs">chemical_properties(X)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Dict{Any, Any} with 7 entries:
   &quot;IUPAC_Name_Preferred&quot;   =&gt; &quot;oxidane&quot;
   &quot;IUPAC_Name_Traditional&quot; =&gt; &quot;water&quot;
   &quot;Charge&quot;                 =&gt; 0
@@ -29,11 +29,11 @@ using PubChem, Catalyst</code></pre><p>We now start by defining our species usin
 
 @variables t
 @species Y(t)
-@attach_metadata Y 977 #CID of Oxygen</code></pre><p>The chemical properties of oxygen have now been attached to <code>Y</code>.</p><pre><code class="language-julia hljs">properties(Y)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Dict{Any, Any} with 7 entries:
-  &quot;IUPAC_Name_Preferred&quot;   =&gt; &quot;molecular oxygen&quot;
-  &quot;IUPAC_Name_Traditional&quot; =&gt; &quot;molecular oxygen&quot;
+@attach_metadata Y 6506 #CID of triethyl 2-hydroxypropane-1,2,3-tricarboxylate</code></pre><p>The chemical properties of triethyl 2-hydroxypropane-1,2,3-tricarboxylate have now been attached to <code>Y</code>.</p><pre><code class="language-julia hljs">chemical_properties(Y)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Dict{Any, Any} with 7 entries:
+  &quot;IUPAC_Name_Preferred&quot;   =&gt; &quot;triethyl 2-hydroxypropane-1,2,3-tricarboxylate&quot;
+  &quot;IUPAC_Name_Traditional&quot; =&gt; &quot;2-hydroxypropane-1,2,3-tricarboxylic acid trieth…
   &quot;Charge&quot;                 =&gt; 0
-  &quot;Molecular_formula&quot;      =&gt; &quot;O2&quot;
-  &quot;Molecular_mass&quot;         =&gt; 31.9898
-  &quot;Molecular_weight&quot;       =&gt; 31.999
-  &quot;Smiles&quot;                 =&gt; &quot;O=O&quot;</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../">« Home</a><a class="docs-footer-nextpage" href="../../chemical_calculations/chemical_calculations/">Chemical Calculations »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.25 on <span class="colophon-date" title="Sunday 3 September 2023 09:27">Sunday 3 September 2023</span>. Using Julia version 1.9.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+  &quot;Molecular_formula&quot;      =&gt; &quot;C12H20O7&quot;
+  &quot;Molecular_mass&quot;         =&gt; 276.121
+  &quot;Molecular_weight&quot;       =&gt; 276.28
+  &quot;Smiles&quot;                 =&gt; &quot;CCOC(=O)CC(CC(=O)OCC)(C(=O)OCC)O&quot;</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../">« Home</a><a class="docs-footer-nextpage" href="../../chemical_calculations/chemical_calculations/">Chemical Calculations »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.25 on <span class="colophon-date" title="Sunday 3 September 2023 10:22">Sunday 3 September 2023</span>. Using Julia version 1.9.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
